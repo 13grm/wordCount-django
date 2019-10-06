@@ -1,9 +1,19 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 
-{% block title %} wordCounter {% endblock %}
+{%  block title  %} wordCounter {% endblock %}
 
- {% block body %}
-<br>
-<h2>welcome to our websites first successful page</h2>
+{% block body %}
+
+<h3> WordCOUNT</h3>
+<form action="{% url 'count' %}">
+
+ <textarea  id="textarea" cols="30" rows="5"></textarea>
+ <br>
+ <button type="submit">count</button>
+ 
+</form>
+
+
+
  {% endblock %}
